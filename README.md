@@ -1,82 +1,88 @@
 # welk.
 
-**Welche deiner Dateien sind in zehn Jahren noch lesbar?** welk. prüft einen Ordner und zeigt dir, bei welchen Formaten sich eine Umwandlung vorsorglich lohnt.
+**Which of your files will still open in ten years?** welk. checks a folder for file formats at risk of becoming unreadable and shows you where converting ahead of time is worth it. It is a digital preservation check for private people, clubs and small offices, running offline in the browser as a PWA, with no upload.
 
-Fotos, Briefe, Tabellen und Videos liegen oft jahrelang auf einer Festplatte. Manche Formate überstehen das gut (JPEG, PNG, PDF, Klartext), andere hängen an einem Hersteller oder an Programmen, die es nicht mehr gibt (RealMedia, WordPerfect, Works, Flash, binäre Office-Formate). Du merkst es erst, wenn eine Datei nicht mehr aufgeht. welk. liest den Ordner im Browser, erkennt die Formate und sagt dir pro Format: Ampel, Risikospanne, Grund und wohin du migrieren kannst.
+![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue) ![PWA](https://img.shields.io/badge/PWA-installable-5a0fc8) ![offline](https://img.shields.io/badge/offline-yes-2ea44f) ![no build step](https://img.shields.io/badge/build_step-none-lightgrey)
 
-Reine Rechnung, keine KI, kein Server. Alles bleibt auf deinem Gerät.
+The app interface is in German.
+
+Photos, letters, spreadsheets and videos often sit on a hard drive for years. Some formats survive that well (JPEG, PNG, PDF, plain text), others depend on one vendor or on programs that no longer exist (RealMedia, WordPerfect, Works, Flash, binary Office formats). You only notice when a file no longer opens. welk. reads the folder in the browser, identifies the formats and tells you per format: traffic light, risk range, reason and what to migrate to.
+
+Pure computation, no AI, no server. Everything stays on your device.
 
 <p align="center">
-  <img src="bilder/1-uebersicht.png" width="240" alt="">
-  <img src="bilder/2-breit.png" width="480" alt="">
+  <img src="bilder/1-uebersicht.png" width="240" alt="welk. on a phone: buttons to choose a folder, drop zone, single files and example, note that only the first 512 bytes are read">
+  <img src="bilder/2-breit.png" width="480" alt="welk. on desktop: start screen with folder picker and the format table date, 45 formats">
 </p>
 
-## Warum
+## Why
 
-Ob ein Format in Zukunft lesbar bleibt, lässt sich vorher einschätzen: Ist die Spezifikation offen? Gibt es eine Norm? Ist das Format verbreitet? Lesen es mehrere unabhängige freie Programme? Archive beantworten diese Fragen seit Jahren, aber für Fachleute. Werkzeuge wie DROID oder Siegfried erkennen Formate sehr genau, bewerten das Risiko aber nicht. welk. ist die einfache Variante für Privatleute, kleine Vereine und Büros.
+Whether a format will stay readable can be judged in advance: Is the specification open? Is there a standard? Is the format widespread? Do several independent free programs read it? Archives have answered these questions for years, but for specialists. Tools like DROID or Siegfried identify formats very precisely, but do not rate the risk. welk. is the simple version for private people, small clubs and offices.
 
-Wie stark Format-Veralterung wirklich droht, ist in der Fachwelt umstritten. Deshalb gibt welk. keine Prognose mit Kommastelle, sondern eine Spanne und eine Ampel.
+How serious format obsolescence really is remains disputed among experts. That is why welk. gives no forecast with decimal places, but a range and a traffic light.
 
-## Funktionen
+## Features
 
-- **Ordner wählen** oder per Drag and Drop ablegen. Ohne Ordnerauswahl im Browser (manche mobilen Browser) geht die Auswahl einzelner Dateien
-- **Formaterkennung** für 45 Alltagsformate (Bild, Dokument, Audio, Video, Archiv) über Signaturen und Dateiendung, mit Hinweis bei Widerspruch (zum Beispiel `.jpg`, aber PNG-Inhalt)
-- **Risikospanne** von 0 bis 10 pro Format, dazu Ampel (grün, gelb, rot), kurzer Grund und Migrationsziel
-- **Übersicht** mit Dateien und Bytes je Ampel, dem Anteil gefährdeter Dateien als Spanne und den Formaten nach Risiko sortiert, rot zuerst
-- **Risikotabelle** mit allen Formaten, Kriterien, Quellen und Stand in der App einsehbar
-- **Export** des Berichts als JSON (`welk-bericht/1`) oder CSV für deutsches Excel
-- **Beispielordner** mit erfundenen Dateien, als `Beispiel` markiert und mit einem Klick entfernbar
-- Hell und dunkel, funktioniert offline, installierbar als App
+- **Choose a folder** or drop it in. Where the browser has no folder picker (some mobile browsers), you can select individual files
+- **Format identification** for 45 everyday formats (image, document, audio, video, archive) via signatures and file extension, with a note on mismatch (for example `.jpg`, but PNG content)
+- **Risk range** from 0 to 10 per format, plus a traffic light (green, yellow, red), a short reason and a migration target
+- **Overview** with files and bytes per traffic light, the share of at-risk files as a range, and the formats sorted by risk, red first
+- **Risk table** with all formats, criteria, sources and date, viewable in the app
+- **Export** the report as JSON (`welk-bericht/1`) or as CSV for German Excel
+- **Example folder** with made-up files, marked as **Beispiel** ("example") and removable with one click
+- Light and dark, works offline, installable as an app
 
-welk. wandelt nichts um, validiert nichts (ob ein PDF wirklich PDF/A ist) und schaut nicht in Archive wie ZIP hinein. Es empfiehlt nur.
+welk. converts nothing, validates nothing (whether a PDF really is PDF/A) and does not look inside archives such as ZIP. It only recommends.
 
-## Datenschutz
+## Privacy
 
-Nichts verlässt dein Gerät. welk. hat keinen Server, kein Konto, keine Analyse, keine Werbung und lädt nichts aus dem Netz nach. Pro Datei werden nur die ersten 512 Byte gelesen, der Rest bleibt unberührt. Ergebnisse existieren nur, solange die Seite offen ist, und werden nicht im Browser gespeichert. Berichte entstehen nur, wenn du sie selbst exportierst.
+Nothing leaves your device. welk. has no server, no account, no analytics, no ads and loads nothing from the network. Only the first 512 bytes of each file are read, the rest stays untouched. Results exist only while the page is open and are not stored in the browser. Reports only exist when you export them yourself.
 
-## Installation
+## Install
 
-welk. ist eine statische Web-App. Es gibt keinen Build-Schritt und keine Abhängigkeiten.
+welk. is a static web app. There is no build step and there are no dependencies.
 
-1. Den Ordner auf einen beliebigen statischen Host legen (eigener Webspace, GitHub Pages, Netlify, ein Raspberry Pi). Für die Installation als App ist HTTPS nötig.
-2. Die Adresse im Browser öffnen.
-3. Im Browsermenü **Zum Startbildschirm hinzufügen** oder **Installieren** wählen. Danach startet welk. wie eine App und funktioniert auch ohne Netz.
+1. Put the folder on any static host (your own web space, GitHub Pages, Netlify, a Raspberry Pi). Installing as an app needs HTTPS.
+2. Open the address in the browser.
+3. In the browser menu choose **Add to Home Screen** or **Install**. After that welk. starts like an app and also works without a network.
 
-Lokal testen:
+Test locally:
 
 ```
 python3 -m http.server 8000
 ```
 
-Dann `http://localhost:8000` im Browser öffnen. `index.html` läuft auch direkt per Doppelklick, nur die Installation als App braucht einen Server.
+Then open `http://localhost:8000` in the browser. `index.html` also runs straight from a double click, only installing as an app needs a server.
 
-## Wie es funktioniert
+## How it works
 
-Die vollständige Spezifikation steht in [`SPEC.md`](SPEC.md). Sie reicht, um welk. in einer anderen Sprache nachzubauen. Die Referenzimplementierung ist `welk.js` (läuft in Browser und Node, keine Abhängigkeiten), die Daten stehen in `tabelle.js`, die Testvektoren in `testvektoren.json`.
+The full specification is in [`SPEC.md`](SPEC.md). It is enough to rebuild welk. in another language. The reference implementation is `welk.js` (runs in browser and Node, no dependencies), the data is in `tabelle.js`, the test vectors in `testvektoren.json`.
 
-**Kurz:**
+**In short:**
 
-1. **Erkennen.** Aus den ersten 512 Byte und der Endung wird das Format bestimmt. Spezifische Signaturen kommen vor allgemeinen. Mehrdeutige Signaturen (OLE2, ZIP, TIFF) entscheidet erst die Endung.
-2. **Bewerten.** Jedes Format hat vier Kriterien als Spanne von 0 (gut) bis 2 (schlecht): `offen`, `norm`, `verbreitung`, `vielfalt`. Risiko = 10 × Summe ÷ 8, gerundet, getrennt für die untere und obere Grenze. Unbekannte Formate haben fest `[2, 10]`.
-3. **Ampel.** Grün, wenn die obere Grenze höchstens 3 ist. Rot, wenn die untere Grenze mindestens 6 ist. Sonst gelb.
-4. **Summe.** Als gefährdet gilt ab Risiko 6. Der Anteil gefährdeter Dateien ist eine Spanne: von „sicher gefährdet“ (untere Grenze mindestens 6) bis „höchstens gefährdet“ (obere Grenze mindestens 6).
+1. **Identify.** The format is determined from the first 512 bytes and the extension. Specific signatures come before general ones. Ambiguous signatures (OLE2, ZIP, TIFF) are only decided by the extension.
+2. **Rate.** Each format has four criteria as a range from 0 (good) to 2 (bad): `offen` (open), `norm` (standard), `verbreitung` (adoption), `vielfalt` (independent implementations). Risk = 10 × sum ÷ 8, rounded, separately for the lower and upper bound. Unknown formats are fixed at `[2, 10]`.
+3. **Traffic light.** Green if the upper bound is at most 3. Red if the lower bound is at least 6. Otherwise yellow.
+4. **Total.** A file counts as at risk from risk 6. The share of at-risk files is a range: from "certainly at risk" (lower bound at least 6) to "at most at risk" (upper bound at least 6).
 
-Beispiel: Eine `.doc`-Datei hat die Summen 4 (unten) und 6 (oben), also Risiko `[5, 8]` und damit gelb. `film.rm` (RealMedia) kommt auf `[9, 10]`, also rot. Ein Ordner aus `urlaub.jpg`, `brief.doc`, `film.rm` und einer unbekannten Datei hat 25 % bis 75 % gefährdete Dateien.
+Example: a `.doc` file has the sums 4 (lower) and 6 (upper), so risk `[5, 8]` and therefore yellow. `film.rm` (RealMedia) comes out at `[9, 10]`, so red. A folder of `urlaub.jpg`, `brief.doc`, `film.rm` and one unknown file has 25 % to 75 % at-risk files.
 
-**Getestet:** Die Rechenfunktionen sind reine Funktionen und mit `node test-calc.js` gegen Handrechnungen und die Testvektoren aus `testvektoren.json` geprüft. Die Testvektoren entstehen mit `werkzeuge/testvektoren-erzeugen.js` aus ausdrücklich hingeschriebenen Bytes, nicht aus der Tabelle.
+**Tested:** the calculation functions are pure functions and checked with `node test-calc.js` against hand calculations and the test vectors from `testvektoren.json`. The test vectors are generated by `werkzeuge/testvektoren-erzeugen.js` from explicitly written-out bytes, not from the table.
 
-**Bekannt und Vermutung:**
+**Known and assumed:**
 
-- Die Formaterkennung ist bekannt und prüfbar, aber gröber als bei DROID oder Siegfried. Unterformate (PDF und PDF/A, RAW-Varianten, Codecs in Containern) werden nicht unterschieden.
-- Die Bewertung der Kriterien ist eine kuratierte Einschätzung mit Quellen, keine Messung. Fachleute würden manche Werte anders setzen. Die PUIDs sind nach bestem Wissen zugeordnet und sollten bei archivarischem Einsatz gegen PRONOM geprüft werden.
-- Vermutung bleibt, ob Alltagsformate in zehn bis zwanzig Jahren wirklich unlesbar werden. welk. bewertet Wahrscheinlichkeiten, keine Gewissheiten.
-- Gleiche Gewichtung der vier Kriterien sowie die Grenzen 3 und 6 sind gesetzt, nicht hergeleitet.
-- Grün heißt nicht „für immer lesbar“, nur geringes Formatrisiko. Sehr breite Spannen (zum Beispiel HEIC und Kamera-RAW) zeigen, dass die Lage umstritten ist.
+- Format identification is known and verifiable, but coarser than DROID or Siegfried. Subformats (PDF and PDF/A, RAW variants, codecs inside containers) are not distinguished.
+- The rating of the criteria is a curated judgment with sources, not a measurement. Experts would set some values differently. The PUIDs are assigned to the best of my knowledge and should be checked against PRONOM for archival use.
+- It remains an assumption whether everyday formats will really become unreadable in ten to twenty years. welk. rates probabilities, not certainties.
+- Equal weighting of the four criteria and the thresholds 3 and 6 are chosen, not derived.
+- Green does not mean "readable forever", only low format risk. Very wide ranges (for example HEIC and camera RAW) show that the situation is disputed.
 
-## Lizenz
+## License
 
-GNU Affero General Public License v3.0 (AGPL-3.0), siehe `LICENSE`.
+GNU Affero General Public License v3.0 (AGPL-3.0), see `LICENSE`.
+
+**Deutsch:** welk. prüft einen Ordner offline im Browser auf Dateiformate, die bald schwer lesbar werden könnten, und zeigt pro Format Risiko, Ampel und Migrationsziel für die Langzeitarchivierung, ohne Upload.
 
 ---
 
-**gedacht.gemacht.** Kleine, ehrliche Software. Alles bleibt auf deinem Gerät.
+**gedacht.gemacht.** Small, honest software. Everything stays on your device. · [More projects](https://github.com/gedachtgemacht)
