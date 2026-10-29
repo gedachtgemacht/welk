@@ -1,0 +1,932 @@
+{
+ "version": "welk-testvektoren/1",
+ "beschreibung": "Testvektoren für welk-tabelle/1 und welk-bericht/1. kopf: die ersten Bytes der Datei als Hex, die Datei ist genau so lang.",
+ "erkennung": [
+  {
+   "name": "urlaub.jpg",
+   "kopf": "FFD8FFE000104A464946",
+   "id": "jpeg",
+   "hinweis": null,
+   "risiko": [
+    0,
+    1
+   ],
+   "ampel": "gruen",
+   "notiz": "Scope 1"
+  },
+  {
+   "name": "brief.doc",
+   "kopf": "D0CF11E0A1B11AE10000000000000000",
+   "id": "doc-binaer",
+   "hinweis": null,
+   "risiko": [
+    5,
+    8
+   ],
+   "ampel": "gelb",
+   "notiz": "Scope 2"
+  },
+  {
+   "name": "film.rm",
+   "kopf": "2E524D4600000012",
+   "id": "realmedia",
+   "hinweis": null,
+   "risiko": [
+    9,
+    10
+   ],
+   "ampel": "rot",
+   "notiz": "Scope 3"
+  },
+  {
+   "name": "foto.jpg",
+   "kopf": "89504E470D0A1A0A0000000D49484452",
+   "id": "png",
+   "hinweis": "endung passt nicht",
+   "notiz": "Scope 4"
+  },
+  {
+   "name": "notiz.xyz",
+   "kopf": "00010203",
+   "id": "unbekannt",
+   "hinweis": null,
+   "risiko": [
+    2,
+    10
+   ],
+   "ampel": "gelb",
+   "notiz": "Scope 5"
+  },
+  {
+   "name": "bild.png",
+   "kopf": "89504E470D0A1A0A0000000D49484452",
+   "id": "png",
+   "hinweis": null
+  },
+  {
+   "name": "foto.cr2",
+   "kopf": "49492A00100000004352020000000000",
+   "id": "cr2",
+   "hinweis": null
+  },
+  {
+   "name": "foto.nef",
+   "kopf": "4D4D002A00000008",
+   "id": "nef",
+   "hinweis": null
+  },
+  {
+   "name": "foto.nrw",
+   "kopf": "49492A0008000000",
+   "id": "nef",
+   "hinweis": null
+  },
+  {
+   "name": "scan.tif",
+   "kopf": "49492A0008000000",
+   "id": "tiff",
+   "hinweis": null
+  },
+  {
+   "name": "scan.tiff",
+   "kopf": "4D4D002A00000008",
+   "id": "tiff",
+   "hinweis": null
+  },
+  {
+   "name": "brief.odt",
+   "kopf": "504B030400000000000000000000000000000000000000000000000000006D696D65747970656170706C69636174696F6E2F766E642E6F617369732E6F70656E646F63756D656E742E74657874",
+   "id": "odt",
+   "hinweis": null
+  },
+  {
+   "name": "kasse.ods",
+   "kopf": "504B030400000000000000000000000000000000000000000000000000006D696D65747970656170706C69636174696F6E2F766E642E6F617369732E6F70656E646F63756D656E742E7370726561647368656574",
+   "id": "ods",
+   "hinweis": null
+  },
+  {
+   "name": "vortrag.odp",
+   "kopf": "504B030400000000000000000000000000000000000000000000000000006D696D65747970656170706C69636174696F6E2F766E642E6F617369732E6F70656E646F63756D656E742E70726573656E746174696F6E",
+   "id": "odp",
+   "hinweis": null
+  },
+  {
+   "name": "brief.docx",
+   "kopf": "504B030414000600",
+   "id": "docx",
+   "hinweis": null
+  },
+  {
+   "name": "kasse.xlsx",
+   "kopf": "504B030414000600",
+   "id": "xlsx",
+   "hinweis": null
+  },
+  {
+   "name": "vortrag.pptx",
+   "kopf": "504B030414000600",
+   "id": "pptx",
+   "hinweis": null,
+   "notiz": "ZIP mit .pptx"
+  },
+  {
+   "name": "notiz.pages",
+   "kopf": "504B030414000000",
+   "id": "pages",
+   "hinweis": null
+  },
+  {
+   "name": "archiv.zip",
+   "kopf": "504B030414000000",
+   "id": "zip",
+   "hinweis": null
+  },
+  {
+   "name": "leer.zip",
+   "kopf": "504B0506000000000000000000000000000000000000",
+   "id": "zip",
+   "hinweis": null
+  },
+  {
+   "name": "brief.zip",
+   "kopf": "504B030400000000000000000000000000000000000000000000000000006D696D65747970656170706C69636174696F6E2F766E642E6F617369732E6F70656E646F63756D656E742E74657874",
+   "id": "odt",
+   "hinweis": "endung passt nicht",
+   "notiz": "ZIP mit ODF-mimetype, aber .zip"
+  },
+  {
+   "name": "kasse.xls",
+   "kopf": "D0CF11E0A1B11AE10000000000000000",
+   "id": "xls-binaer",
+   "hinweis": null,
+   "notiz": "OLE2 mit .xls"
+  },
+  {
+   "name": "vortrag.ppt",
+   "kopf": "D0CF11E0A1B11AE10000000000000000",
+   "id": "ppt-binaer",
+   "hinweis": null
+  },
+  {
+   "name": "rezepte.wps",
+   "kopf": "D0CF11E0A1B11AE10000000000000000",
+   "id": "wps",
+   "hinweis": null
+  },
+  {
+   "name": "daten.bin",
+   "kopf": "D0CF11E0A1B11AE10000000000000000",
+   "id": "ole2",
+   "hinweis": null
+  },
+  {
+   "name": "bild.heic",
+   "kopf": "00000018667479706865696300000000",
+   "id": "heic",
+   "hinweis": null
+  },
+  {
+   "name": "bild.heif",
+   "kopf": "00000018667479706D69663100000000",
+   "id": "heic",
+   "hinweis": null
+  },
+  {
+   "name": "clip.mov",
+   "kopf": "00000014667479707174202000000000",
+   "id": "mov",
+   "hinweis": null
+  },
+  {
+   "name": "lied.m4a",
+   "kopf": "00000020667479704D34412000000000",
+   "id": "m4a",
+   "hinweis": null
+  },
+  {
+   "name": "video.mp4",
+   "kopf": "000000206674797069736F6D00000200",
+   "id": "mp4",
+   "hinweis": null
+  },
+  {
+   "name": "bild.webp",
+   "kopf": "524946462400000057454250",
+   "id": "webp",
+   "hinweis": null
+  },
+  {
+   "name": "ton.wav",
+   "kopf": "524946462400000057415645",
+   "id": "wav",
+   "hinweis": null
+  },
+  {
+   "name": "film.avi",
+   "kopf": "524946462400000041564920",
+   "id": "avi",
+   "hinweis": null
+  },
+  {
+   "name": "lied.wma",
+   "kopf": "3026B2758E66CF11A6D900AA0062CE6C",
+   "id": "wma",
+   "hinweis": null
+  },
+  {
+   "name": "film.wmv",
+   "kopf": "3026B2758E66CF11A6D900AA0062CE6C",
+   "id": "wmv",
+   "hinweis": null
+  },
+  {
+   "name": "film.asf",
+   "kopf": "3026B2758E66CF11A6D900AA0062CE6C",
+   "id": "wmv",
+   "hinweis": null
+  },
+  {
+   "name": "bild.gif",
+   "kopf": "47494638396101000100",
+   "id": "gif",
+   "hinweis": null
+  },
+  {
+   "name": "alt.gif",
+   "kopf": "47494638376101000100",
+   "id": "gif",
+   "hinweis": null
+  },
+  {
+   "name": "bild.bmp",
+   "kopf": "424D3A000000",
+   "id": "bmp",
+   "hinweis": null
+  },
+  {
+   "name": "ebenen.psd",
+   "kopf": "384250530001",
+   "id": "psd",
+   "hinweis": null
+  },
+  {
+   "name": "rechnung.pdf",
+   "kopf": "255044462D312E37",
+   "id": "pdf",
+   "hinweis": null
+  },
+  {
+   "name": "brief.rtf",
+   "kopf": "7B5C727466315C616E7369",
+   "id": "rtf",
+   "hinweis": null
+  },
+  {
+   "name": "brief.wpd",
+   "kopf": "FF575043",
+   "id": "wordperfect",
+   "hinweis": null
+  },
+  {
+   "name": "lied.mp3",
+   "kopf": "4944330400",
+   "id": "mp3",
+   "hinweis": null
+  },
+  {
+   "name": "roh.mp3",
+   "kopf": "FFFB9064",
+   "id": "mp3",
+   "hinweis": null
+  },
+  {
+   "name": "lied.flac",
+   "kopf": "664C614300000022",
+   "id": "flac",
+   "hinweis": null
+  },
+  {
+   "name": "lied.ogg",
+   "kopf": "4F6767530002",
+   "id": "ogg",
+   "hinweis": null
+  },
+  {
+   "name": "lied.mid",
+   "kopf": "4D54686400000006",
+   "id": "midi",
+   "hinweis": null
+  },
+  {
+   "name": "film.mkv",
+   "kopf": "1A45DFA3",
+   "id": "mkv",
+   "hinweis": null
+  },
+  {
+   "name": "clip.webm",
+   "kopf": "1A45DFA3",
+   "id": "mkv",
+   "hinweis": null
+  },
+  {
+   "name": "clip.flv",
+   "kopf": "464C5601",
+   "id": "flv",
+   "hinweis": null
+  },
+  {
+   "name": "spiel.swf",
+   "kopf": "4357530A",
+   "id": "swf",
+   "hinweis": null
+  },
+  {
+   "name": "archiv.rar",
+   "kopf": "526172211A0700",
+   "id": "rar",
+   "hinweis": null
+  },
+  {
+   "name": "archiv.7z",
+   "kopf": "377ABCAF271C0004",
+   "id": "7z",
+   "hinweis": null
+  },
+  {
+   "name": "seite.html",
+   "kopf": "3C21444F43545950452068746D6C3E0A3C68746D6C206C616E673D226465223E",
+   "id": "html",
+   "hinweis": null
+  },
+  {
+   "name": "notiz.txt",
+   "kopf": "48616C6C6F2057656C740A",
+   "id": "text-utf8",
+   "hinweis": null
+  },
+  {
+   "name": "gruesse.md",
+   "kopf": "4772C3BCC39F65206175732064656D20426569737069656C0A",
+   "id": "text-utf8",
+   "hinweis": null
+  },
+  {
+   "name": "URLAUB.JPG",
+   "kopf": "FFD8FFE1",
+   "id": "jpeg",
+   "hinweis": null,
+   "notiz": "Endung groß"
+  },
+  {
+   "name": "bild.xyz",
+   "kopf": "FFD8FFE1",
+   "id": "jpeg",
+   "hinweis": null,
+   "notiz": "unbekannte Endung, kein Hinweis"
+  },
+  {
+   "name": "brief.doc",
+   "kopf": "7B5C72746631",
+   "id": "rtf",
+   "hinweis": "endung passt nicht",
+   "notiz": "RTF unter .doc"
+  },
+  {
+   "name": "bm.txt",
+   "kopf": "424D20697374206B65696E2042696C64",
+   "id": "text-utf8",
+   "hinweis": null,
+   "notiz": "BMP braucht die Endung"
+  },
+  {
+   "name": "README",
+   "kopf": "48616C6C6F",
+   "id": "text-utf8",
+   "hinweis": null,
+   "notiz": "ohne Endung"
+  },
+  {
+   "name": "seite.txt",
+   "kopf": "3C68746D6C3E",
+   "id": "text-utf8",
+   "hinweis": null,
+   "notiz": "HTML braucht die Endung"
+  },
+  {
+   "name": "latin1.txt",
+   "kopf": "4772FC65",
+   "id": "text-utf8",
+   "hinweis": "nur endung",
+   "notiz": "kein gültiges UTF-8"
+  },
+  {
+   "name": "nul.txt",
+   "kopf": "41004200",
+   "id": "text-utf8",
+   "hinweis": "nur endung",
+   "notiz": "NUL-Byte"
+  },
+  {
+   "name": "lang.txt",
+   "kopf": "61616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161C3",
+   "id": "text-utf8",
+   "hinweis": null,
+   "notiz": "Zeichen am Fensterende angeschnitten"
+  },
+  {
+   "name": "kurz.txt",
+   "kopf": "61C3",
+   "id": "text-utf8",
+   "hinweis": "nur endung",
+   "notiz": "angeschnitten, Datei endet"
+  },
+  {
+   "name": "ueberlang.txt",
+   "kopf": "C0AF",
+   "id": "text-utf8",
+   "hinweis": "nur endung",
+   "notiz": "überlange Form"
+  },
+  {
+   "name": "ersatz.txt",
+   "kopf": "EDA080",
+   "id": "text-utf8",
+   "hinweis": "nur endung",
+   "notiz": "Ersatzzeichen"
+  },
+  {
+   "name": "leer.jpg",
+   "kopf": "",
+   "id": "jpeg",
+   "hinweis": "nur endung",
+   "notiz": "leere Datei"
+  },
+  {
+   "name": "leer.xyz",
+   "kopf": "",
+   "id": "unbekannt",
+   "hinweis": null,
+   "notiz": "leere Datei, Endung nicht in der Tabelle"
+  },
+  {
+   "name": "kurz.png",
+   "kopf": "89504E",
+   "id": "png",
+   "hinweis": "nur endung",
+   "notiz": "kürzer als die Signatur"
+  },
+  {
+   "name": "kurz.odt",
+   "kopf": "504B030400000000000000000000000000000000000000000000000000006D696D6574797065",
+   "id": "zip",
+   "hinweis": "endung passt nicht",
+   "notiz": "ODF abgeschnitten, nur der ZIP-Kopf passt"
+  },
+  {
+   "name": "daten.dat",
+   "kopf": "504B030414000000",
+   "id": "zip",
+   "hinweis": null,
+   "notiz": "ZIP, Endung unbekannt"
+  },
+  {
+   "name": "foto.png",
+   "kopf": "49492A00100000004352020000000000",
+   "id": "cr2",
+   "hinweis": "endung passt nicht"
+  }
+ ],
+ "risiko": [
+  {
+   "kriterien": {
+    "offen": [
+     0,
+     0
+    ],
+    "norm": [
+     0,
+     0
+    ],
+    "verbreitung": [
+     0,
+     0
+    ],
+    "vielfalt": [
+     0,
+     1
+    ]
+   },
+   "risiko": [
+    0,
+    1
+   ],
+   "ampel": "gruen",
+   "notiz": "Scope 1: 10·1/8 = 1,25"
+  },
+  {
+   "kriterien": {
+    "offen": [
+     1,
+     1
+    ],
+    "norm": [
+     2,
+     2
+    ],
+    "verbreitung": [
+     1,
+     2
+    ],
+    "vielfalt": [
+     0,
+     1
+    ]
+   },
+   "risiko": [
+    5,
+    8
+   ],
+   "ampel": "gelb",
+   "notiz": "Scope 2: 10·6/8 = 7,5"
+  },
+  {
+   "kriterien": {
+    "offen": [
+     2,
+     2
+    ],
+    "norm": [
+     2,
+     2
+    ],
+    "verbreitung": [
+     2,
+     2
+    ],
+    "vielfalt": [
+     1,
+     2
+    ]
+   },
+   "risiko": [
+    9,
+    10
+   ],
+   "ampel": "rot",
+   "notiz": "Scope 3: 10·7/8 = 8,75"
+  },
+  {
+   "kriterien": {
+    "offen": [
+     0,
+     0
+    ],
+    "norm": [
+     0,
+     0
+    ],
+    "verbreitung": [
+     0,
+     1
+    ],
+    "vielfalt": [
+     0,
+     1
+    ]
+   },
+   "risiko": [
+    0,
+    3
+   ],
+   "ampel": "gruen",
+   "notiz": "10·2/8 = 2,5 wird 3"
+  },
+  {
+   "kriterien": {
+    "offen": [
+     0,
+     1
+    ],
+    "norm": [
+     0,
+     1
+    ],
+    "verbreitung": [
+     0,
+     1
+    ],
+    "vielfalt": [
+     0,
+     0
+    ]
+   },
+   "risiko": [
+    0,
+    4
+   ],
+   "ampel": "gelb",
+   "notiz": "10·3/8 = 3,75 wird 4"
+  },
+  {
+   "kriterien": {
+    "offen": [
+     1,
+     1
+    ],
+    "norm": [
+     1,
+     1
+    ],
+    "verbreitung": [
+     1,
+     1
+    ],
+    "vielfalt": [
+     1,
+     2
+    ]
+   },
+   "risiko": [
+    5,
+    6
+   ],
+   "ampel": "gelb",
+   "notiz": "10·5/8 = 6,25 wird 6"
+  },
+  {
+   "kriterien": {
+    "offen": [
+     1,
+     2
+    ],
+    "norm": [
+     1,
+     2
+    ],
+    "verbreitung": [
+     1,
+     2
+    ],
+    "vielfalt": [
+     2,
+     2
+    ]
+   },
+   "risiko": [
+    6,
+    10
+   ],
+   "ampel": "rot",
+   "notiz": "min 6 ist rot"
+  },
+  {
+   "kriterien": null,
+   "risiko": [
+    2,
+    10
+   ],
+   "ampel": "gelb",
+   "notiz": "unbekannt"
+  }
+ ],
+ "summe": [
+  {
+   "notiz": "Scope 5: Ordner aus 1, 2, 3 und notiz.xyz",
+   "dateien": [
+    {
+     "groesse": 2400000,
+     "risiko": [
+      0,
+      1
+     ]
+    },
+    {
+     "groesse": 48000,
+     "risiko": [
+      5,
+      8
+     ]
+    },
+    {
+     "groesse": 9000000,
+     "risiko": [
+      9,
+      10
+     ]
+    },
+    {
+     "groesse": 4,
+     "risiko": [
+      2,
+      10
+     ]
+    }
+   ],
+   "erwartet": {
+    "dateien": 4,
+    "bytes": 11448004,
+    "gruen": {
+     "dateien": 1,
+     "bytes": 2400000
+    },
+    "gelb": {
+     "dateien": 2,
+     "bytes": 48004
+    },
+    "rot": {
+     "dateien": 1,
+     "bytes": 9000000
+    },
+    "gefaehrdet_sicher": 1,
+    "gefaehrdet_hoechstens": 3,
+    "anteil": [
+     25,
+     75
+    ]
+   }
+  },
+  {
+   "notiz": "leerer Ordner, keine Division durch null",
+   "dateien": [],
+   "erwartet": {
+    "dateien": 0,
+    "bytes": 0,
+    "gruen": {
+     "dateien": 0,
+     "bytes": 0
+    },
+    "gelb": {
+     "dateien": 0,
+     "bytes": 0
+    },
+    "rot": {
+     "dateien": 0,
+     "bytes": 0
+    },
+    "gefaehrdet_sicher": 0,
+    "gefaehrdet_hoechstens": 0,
+    "anteil": null
+   }
+  },
+  {
+   "notiz": "Drittel: 33,3 abgerundet, 66,7 aufgerundet",
+   "dateien": [
+    {
+     "groesse": 1,
+     "risiko": [
+      9,
+      10
+     ]
+    },
+    {
+     "groesse": 1,
+     "risiko": [
+      5,
+      8
+     ]
+    },
+    {
+     "groesse": 1,
+     "risiko": [
+      0,
+      0
+     ]
+    }
+   ],
+   "erwartet": {
+    "dateien": 3,
+    "bytes": 3,
+    "gruen": {
+     "dateien": 1,
+     "bytes": 1
+    },
+    "gelb": {
+     "dateien": 1,
+     "bytes": 1
+    },
+    "rot": {
+     "dateien": 1,
+     "bytes": 1
+    },
+    "gefaehrdet_sicher": 1,
+    "gefaehrdet_hoechstens": 2,
+    "anteil": [
+     33,
+     67
+    ]
+   }
+  },
+  {
+   "notiz": "Siebtel: 14,29 ergibt 14 bis 15",
+   "dateien": [
+    {
+     "groesse": 10,
+     "risiko": [
+      8,
+      9
+     ]
+    },
+    {
+     "groesse": 5,
+     "risiko": [
+      0,
+      1
+     ]
+    },
+    {
+     "groesse": 5,
+     "risiko": [
+      0,
+      1
+     ]
+    },
+    {
+     "groesse": 5,
+     "risiko": [
+      0,
+      1
+     ]
+    },
+    {
+     "groesse": 5,
+     "risiko": [
+      0,
+      1
+     ]
+    },
+    {
+     "groesse": 5,
+     "risiko": [
+      0,
+      1
+     ]
+    },
+    {
+     "groesse": 5,
+     "risiko": [
+      0,
+      1
+     ]
+    }
+   ],
+   "erwartet": {
+    "dateien": 7,
+    "bytes": 40,
+    "gruen": {
+     "dateien": 6,
+     "bytes": 30
+    },
+    "gelb": {
+     "dateien": 0,
+     "bytes": 0
+    },
+    "rot": {
+     "dateien": 1,
+     "bytes": 10
+    },
+    "gefaehrdet_sicher": 1,
+    "gefaehrdet_hoechstens": 1,
+    "anteil": [
+     14,
+     15
+    ]
+   }
+  },
+  {
+   "notiz": "max genau 6 zählt als höchstens gefährdet, min 5 nicht als sicher",
+   "dateien": [
+    {
+     "groesse": 0,
+     "risiko": [
+      5,
+      6
+     ]
+    }
+   ],
+   "erwartet": {
+    "dateien": 1,
+    "bytes": 0,
+    "gruen": {
+     "dateien": 0,
+     "bytes": 0
+    },
+    "gelb": {
+     "dateien": 1,
+     "bytes": 0
+    },
+    "rot": {
+     "dateien": 0,
+     "bytes": 0
+    },
+    "gefaehrdet_sicher": 0,
+    "gefaehrdet_hoechstens": 1,
+    "anteil": [
+     0,
+     100
+    ]
+   }
+  }
+ ]
+}
