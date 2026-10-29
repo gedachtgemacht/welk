@@ -4,6 +4,8 @@
 
 ![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue) ![PWA](https://img.shields.io/badge/PWA-installable-5a0fc8) ![offline](https://img.shields.io/badge/offline-yes-2ea44f) ![no build step](https://img.shields.io/badge/build_step-none-lightgrey)
 
+**Try it:** https://gedachtgemacht.github.io/welk/ (works in any phone browser, install via "Add to Home Screen")
+
 The app interface is in German.
 
 Photos, letters, spreadsheets and videos often sit on a hard drive for years. Some formats survive that well (JPEG, PNG, PDF, plain text), others depend on one vendor or on programs that no longer exist (RealMedia, WordPerfect, Works, Flash, binary Office formats). You only notice when a file no longer opens. welk. reads the folder in the browser, identifies the formats and tells you per format: traffic light, risk range, reason and what to migrate to.
